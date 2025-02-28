@@ -1,0 +1,86 @@
+.tittle{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-login{
+    margin-top: 0px;
+    background-color: floralwhite;
+}
+
+.text{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-form{
+    background-color: silver ;
+    border-radius: 20px;
+}
+
+.input-group{
+    margin-top: 30px;
+}
+
+.textBox{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.box{
+    margin-top: 10px;
+    border-radius: 20px;
+    display: table-cell;
+    padding: 40px;
+    vertical-align: top;
+}
+
+.login-box{
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: darkgray;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btnSummit{
+    margin-top: 0px;
+    border-radius: 20px;
+    background-color: gray;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* .boton{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}*/
+
+.complement{
+    margin-top: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/*
+PRUEBA DE COMMITS DE GH
+*/
+
