@@ -33,13 +33,15 @@ if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
     </form>
 </div>
 <?php } ?>
-<div class="thread-body">
+<div class="texto-principal">
+    
 <?php
+
     if($cfg && ($page = $cfg->getLandingPage()))
-    echo  '<h1>'.__('Bienvenidos a osTicket').'</h1>';
-    else
-        //echo  '<h1>'.__('Bienvenidos a osTicket').'</h1>';
-    ?>
+    echo $page->getBodyWithImages();
+else
+    echo  '<h1>'.__('Bienvenido al Centro de').'</h1>';
+?>
     </div>
 </div>
 <div class="clear"></div>
@@ -80,3 +82,4 @@ if ($cats->all()) { ?>
 </div>
 
 <?php require(CLIENTINC_DIR.'footer.inc.php'); ?>
+

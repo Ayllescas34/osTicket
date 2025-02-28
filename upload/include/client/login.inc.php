@@ -20,14 +20,15 @@ if ($content) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo Format::display($title); ?></title>
-    <link rel="stylesheet" href="<?php echo ROOT_PATH; ?>css/login.css" media="screen"/> <!-- llamado a css -->
+   
+    <script src="<?php echo ROOT_PATH; ?>/js/custom.js"></script>
 </head>
 <body>
     <h1 class="tittle"><?php echo Format::display($title); ?></h1>
     <p class="text"><?php echo Format::display($body); ?></p>
     <form  class="form-login"action="login.php" method="post" id="clientLogin">
         <?php csrf_token(); ?>
-        <div class="login-form">
+        <div class="w-64 flex-2">
             <div class="login-box">
                 <strong><?php echo Format::htmlchars($errors['login']); ?></strong>
                 <div>
