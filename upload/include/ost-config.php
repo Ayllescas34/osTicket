@@ -32,6 +32,9 @@ if(OSTINSTALLED!=TRUE){
 # Encrypt/Decrypt secret key - randomly generated during installation.
 define('SECRET_SALT','BsZ0EUs6Gy2LDeBUj7GUltFjIgPa2AWQ');
 
+# Desactivar el modo offline
+define('OST_SITE_OFFLINE', false);
+
 #Default admin email. Used only on db connection issues and related alerts.
 define('ADMIN_EMAIL','ayllescas34@gmail.com');
 
