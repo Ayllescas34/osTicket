@@ -7,8 +7,8 @@ if ($thisstaff && $thisstaff->is2FAPending())
     $msg = "2FA Pending";
 
 ?>
-<div id="brickwall"></div>
-<div class="max-w-lg min-h-100 grid gap-1" id="loginBox">
+<div  id="brickwall"></div>
+<div class="max-w-lg min-h-50 grid gap-1" id="loginBox">
     <div id="blur">
         <div id="background"></div>
     </div>
@@ -16,13 +16,13 @@ if ($thisstaff && $thisstaff->is2FAPending())
         <span class="" class="valign-helper"></span>
         <img  src="logo.php?login" alt="osTicket :: <?php echo __('Staff Control Panel');?>" />
     </a></h1>
-    <h3 class="flex items-center justify-center " id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
+    <h3 class="flex items-center justify-center" id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
     <div class="banner"><small><?php echo ($content) ? Format::display($content->getLocalBody()) : ''; ?></small></div>
     <div id="loading" style="display:none;" class="dialog">
         <h1><i class="icon-spinner icon-spin icon-large"></i>
         <?php echo __('Verifying');?></h1>
     </div>
-    <form class="max-w-lg min-g-100 flez items-center justify-center" action="login.php" method="post" id="login" onsubmit="attemptLoginAjax(event)">
+    <form class="max-w-lg min-g-100 flex items-center justify-center" action="login.php" method="post" id="login" onsubmit="attemptLoginAjax(event)">
         <?php csrf_token();
         if ($thisstaff
                 &&  $thisstaff->is2FAPending()
@@ -31,9 +31,9 @@ if ($thisstaff && $thisstaff->is2FAPending())
             // Render 2FA input form
             include STAFFINC_DIR . 'templates/dynamic-form-simple.tmpl.php';
             ?>
-            <fieldset >
+            <fieldset > <!--class="grid grid-cols-3"-->
             <input type="hidden" name="do" value="2fa">
-            <button class="flex flex-col" type="submit"
+            <button class="flex flex-col w-200" type="submit"
                 name="submit"><i class="icon-signin"></i>
                 <?php echo __('Verify'); ?>
             </button>
@@ -41,7 +41,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
         <?php
         } else { ?>
             <input type="hidden" name="do" value="scplogin">
-            <fieldset class="flex flex-col">
+            <fieldset>
             <input type="text" name="userid" id="name" value="<?php
                 echo $info['userid'] ?? null; ?>" placeholder="<?php echo __('Email or Username'); ?>"
                 autofocus autocorrect="off" autocapitalize="off">
@@ -49,8 +49,8 @@ if ($thisstaff && $thisstaff->is2FAPending())
                 <h3 style="display:inline"><a id="reset-link" class="<?php
                     if (!$show_reset || !$cfg->allowPasswordReset()) echo 'hidden';
                     ?>" href="pwreset.php"><?php echo __('Forgot My Password'); ?></a></h3>
-                <button class="submit button pull-right" type="submit"
-                    name="submit"><i class="icon-signin"></i>
+                <button class="flex justify-center w-50 p-1 m-1" type="submit"
+                    name="submit"><i class=""></i>
                     <?php echo __('Log In'); ?>
                 </button>
             </fieldset>
