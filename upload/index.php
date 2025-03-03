@@ -12,6 +12,8 @@
     See LICENSE.TXT for details.
 
     vim: expandtab sw=4 ts=4 sts=4:
+
+    here
 **********************************************************************/
 require('client.inc.php');
 
