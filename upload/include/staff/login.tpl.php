@@ -8,21 +8,21 @@ if ($thisstaff && $thisstaff->is2FAPending())
 
 ?>
 <div id="brickwall"></div>
-<div id="loginBox">
+<div class="max-w-lg min-h-100 grid gap-1" id="loginBox">
     <div id="blur">
         <div id="background"></div>
     </div>
     <h1 class="flex items-center justify-center" id="logo"><a href="index.php">
-        <span class="flex items-center justify-center" class="valign-helper"></span>
+        <span class="" class="valign-helper"></span>
         <img  src="logo.php?login" alt="osTicket :: <?php echo __('Staff Control Panel');?>" />
     </a></h1>
-    <h3 class="flex items-center justify-center" id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
+    <h3 class="flex items-center justify-center " id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
     <div class="banner"><small><?php echo ($content) ? Format::display($content->getLocalBody()) : ''; ?></small></div>
     <div id="loading" style="display:none;" class="dialog">
         <h1><i class="icon-spinner icon-spin icon-large"></i>
         <?php echo __('Verifying');?></h1>
     </div>
-    <form action="login.php" method="post" id="login" onsubmit="attemptLoginAjax(event)">
+    <form class="max-w-lg min-g-100 flez items-center justify-center" action="login.php" method="post" id="login" onsubmit="attemptLoginAjax(event)">
         <?php csrf_token();
         if ($thisstaff
                 &&  $thisstaff->is2FAPending()
@@ -31,9 +31,9 @@ if ($thisstaff && $thisstaff->is2FAPending())
             // Render 2FA input form
             include STAFFINC_DIR . 'templates/dynamic-form-simple.tmpl.php';
             ?>
-            <fieldset style="p-10">
+            <fieldset >
             <input type="hidden" name="do" value="2fa">
-            <button class="flex-items-center" type="submit"
+            <button class="flex flex-col" type="submit"
                 name="submit"><i class="icon-signin"></i>
                 <?php echo __('Verify'); ?>
             </button>
@@ -41,7 +41,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
         <?php
         } else { ?>
             <input type="hidden" name="do" value="scplogin">
-            <fieldset>
+            <fieldset class="flex flex-col">
             <input type="text" name="userid" id="name" value="<?php
                 echo $info['userid'] ?? null; ?>" placeholder="<?php echo __('Email or Username'); ?>"
                 autofocus autocorrect="off" autocapitalize="off">
