@@ -42,16 +42,16 @@ if ($thisstaff && $thisstaff->is2FAPending())
         } else { ?>
             <input type="hidden" name="do" value="scplogin">
             <fieldset>
-            <input type="text" name="userid" id="name" value="<?php
-                echo $info['userid'] ?? null; ?>" placeholder="<?php echo __('Email or Username'); ?>"
+            <input class="font-bold tracking-wide" type="text" name="userid" id="name" value="<?php
+                echo $info['userid'] ?? null; ?>" placeholder="<?php echo __('Correo o Usuario'); ?>"
                 autofocus autocorrect="off" autocapitalize="off">
-            <input type="password" name="passwd" id="pass" maxlength="128" placeholder="<?php echo __('Password'); ?>" autocorrect="off" autocapitalize="off">
+            <input type="password" name="passwd" id="pass" maxlength="128" placeholder="<?php echo __('Contraseña'); ?>" autocorrect="off" autocapitalize="off">
                 <h3 style="display:inline"><a id="reset-link" class="<?php
                     if (!$show_reset || !$cfg->allowPasswordReset()) echo 'hidden';
                     ?>" href="pwreset.php"><?php echo __('Forgot My Password'); ?></a></h3>
-                <button class="flex justify-center w-50 p-1 m-1" type="submit"
+                <button class="flex justify-center w-50 p-1 m-1 border-gray-400 " type="submit"
                     name="submit"><i class=""></i>
-                    <?php echo __('Log In'); ?>
+                    <?php echo __('Iniciar Sesión'); ?>
                 </button>
             </fieldset>
         <?php
