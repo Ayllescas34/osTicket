@@ -9,12 +9,12 @@ if ($thisstaff && $thisstaff->is2FAPending())
 ?>
 <div  id="brickwall"></div>
 <div class="max-w-lg min-h-50 grid gap-1" id="loginBox">
-    <div id="blur">
+    <div class="divider divider-neutral" id="blur">
         <div id="background"></div>
     </div>
-    <h1 class="flex items-center justify-center" id="logo"><a href="index.php">
-        <span class="" class="valign-helper"></span>
-        <img  src="logo.php?login" alt="osTicket :: <?php echo __('Staff Control Panel');?>" />
+    <h1 class="flex items-center justify-center mt-6" id="logo"><a href="index.php">
+        <span class="flex-shrink-0 mr-4" ></span>
+        <img class="md:mt- ml-3 md:ml-0 h-20 w-20 md:h-10 md:w-25 border-[6px]" src="logo.php?login" alt="osTicket :: <?php echo __('Staff Control Panel');?>" />
     </a></h1>
     <h3 class="flex items-center justify-center" id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
     <div class="banner"><small><?php echo ($content) ? Format::display($content->getLocalBody()) : ''; ?></small></div>
@@ -31,9 +31,9 @@ if ($thisstaff && $thisstaff->is2FAPending())
             // Render 2FA input form
             include STAFFINC_DIR . 'templates/dynamic-form-simple.tmpl.php';
             ?>
-            <fieldset > <!--class="grid grid-cols-3"-->
+            <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box" > <!--class="grid grid-cols-3"-->
             <input type="hidden" name="do" value="2fa">
-            <button class="flex flex-col w-200" type="submit"
+            <button class="flex flex-col w-200 " type="submit"
                 name="submit"><i class="icon-signin"></i>
                 <?php echo __('Verify'); ?>
             </button>
@@ -42,14 +42,14 @@ if ($thisstaff && $thisstaff->is2FAPending())
         } else { ?>
             <input type="hidden" name="do" value="scplogin">
             <fieldset>
-            <input class="font-bold tracking-wide" type="text" name="userid" id="name" value="<?php
+            <input class=" input input-lg font-bold tracking-wide" type="text" name="userid" id="name" value="<?php
                 echo $info['userid'] ?? null; ?>" placeholder="<?php echo __('Correo o Usuario'); ?>"
                 autofocus autocorrect="off" autocapitalize="off">
-            <input class="font-bold tracking-wide" type="password" name="passwd" id="pass" maxlength="128" placeholder="<?php echo __('Contraseña'); ?>" autocorrect="off" autocapitalize="off">
+            <input class="input input-lg font-bold tracking-wide" type="password" name="passwd" id="pass" maxlength="128" placeholder="<?php echo __('Contraseña'); ?>" autocorrect="off" autocapitalize="off">
                 <h3 class="font-bold tracking-wide"><a id="reset-link" class="<?php
                     if (!$show_reset || !$cfg->allowPasswordReset()) echo 'hidden';
                     ?>" href="pwreset.php"><?php echo __('Forgot My Password'); ?></a></h3>
-                <button class="flex justify-center w-50 p-1 m-1 border-gray-400 tracking-wide-100" type="submit"
+                <button class="btn btn-block    " type="submit"
                     name="submit"><i class=""></i>
                     <?php echo __('Iniciar Sesión'); ?>
                 </button>

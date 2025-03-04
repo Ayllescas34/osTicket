@@ -21,7 +21,11 @@ if ($content) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo Format::display($title); ?></title>
    
-    <script src="<?php echo ROOT_PATH; ?>/js/custom.js"></script>
+    <link href="<?php echo ROOT_PATH; ?>/css/daysi.css" rel="stylesheet" type="text/css" />
+    <script src="<?php echo ROOT_PATH; ?>/js/daysi.js"></script>
+
+
+
 </head>
 <body>
     <h1 class="tittle"><?php echo Format::display($title); ?></h1>
@@ -32,13 +36,13 @@ if ($content) {
             <div class="login-box">
                 <strong><?php echo Format::htmlchars($errors['login']); ?></strong>
                 <div>
-                    <input id="username" placeholder="<?php echo __('Correo o Usuario'); ?>" type="text" name="luser" size="30" value="<?php echo $email; ?>" class="nowarn">
+                    <input class="input" id="username" placeholder="<?php echo __('Correo o Usuario'); ?>" type="text" name="luser" size="30" value="<?php echo $email; ?>" class="nowarn">
                 </div>
                 <div>
                     <input id="passwd" placeholder="<?php echo __('Clave'); ?>" type="password" name="lpasswd" size="30" maxlength="128" value="<?php echo $passwd; ?>" class="nowarn">
                 </div>
                 <p>
-                    <input class="btnSummit" type="submit" value="<?php echo __('Iniciar Sesión'); ?>">
+                    <input class="input" type="submit" value="<?php echo __('Iniciar Sesión'); ?>">
                     <?php if ($suggest_pwreset) { ?>
                         <a style="padding-top:4px;display:inline-block;" href="pwreset.php"><?php echo __('Forgot My Password'); ?></a>
                     <?php } ?>
