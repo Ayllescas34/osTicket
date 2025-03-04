@@ -5,7 +5,7 @@ $info = ($_POST && $errors)?Format::htmlchars($_POST):array();
 ?>
 
 <div id="brickwall"></div>
-<div id="loginBox">
+<div class="mt-50" id="loginBox">
     <div id="blur">
         <div id="background"></div>
     </div>

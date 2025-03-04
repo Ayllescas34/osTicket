@@ -8,9 +8,9 @@ if ($thisstaff && $thisstaff->is2FAPending())
 
 ?>
 <div  id="brickwall"></div>
-<div class="max-w-lg min-h-50 grid gap-1" id="loginBox">
+<div class="max-w-lg min-h-50 grid gap-1 mt-30" id="loginBox">
     <div class="divider divider-neutral" id="blur">
-        <div id="background"></div>
+        <div class="mt-30" id="background"></div>
     </div>
     <h1 class="flex items-center justify-center mt-6" id="logo"><a href="index.php">
         <span class="flex-shrink-0 mr-4" ></span>
