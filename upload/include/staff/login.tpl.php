@@ -31,9 +31,9 @@ if ($thisstaff && $thisstaff->is2FAPending())
             // Render 2FA input form
             include STAFFINC_DIR . 'templates/dynamic-form-simple.tmpl.php';
             ?>
-            <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box" > <!--class="grid grid-cols-3"-->
+            <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box " > <!--class="grid grid-cols-3"-->
             <input type="hidden" name="do" value="2fa">
-            <button class="flex flex-col w-200 " type="submit"
+            <button class="flex flex-col w-200  " type="submit"
                 name="submit"><i class="icon-signin"></i>
                 <?php echo __('Verify'); ?>
             </button>
@@ -41,7 +41,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
         <?php
         } else { ?>
             <input type="hidden" name="do" value="scplogin">
-            <fieldset>
+            <fieldset >
             <input class=" input input-lg font-bold tracking-wide" type="text" name="userid" id="name" value="<?php
                 echo $info['userid'] ?? null; ?>" placeholder="<?php echo __('Correo o Usuario'); ?>"
                 autofocus autocorrect="off" autocapitalize="off">
@@ -49,7 +49,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
                 <h3 class="font-bold tracking-wide"><a id="reset-link" class="<?php
                     if (!$show_reset || !$cfg->allowPasswordReset()) echo 'hidden';
                     ?>" href="pwreset.php"><?php echo __('Forgot My Password'); ?></a></h3>
-                <button class="btn btn-block    " type="submit"
+                <button class="btn btn-block btn btn-lg " type="submit"
                     name="submit"><i class=""></i>
                     <?php echo __('Iniciar Sesión'); ?>
                 </button>
