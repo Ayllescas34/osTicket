@@ -157,11 +157,11 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
         <div class="clear"></div>
         <?php
         if($nav){ ?>
-        <ul id="nav" class="flush-left">
+        <ul class="list bg-base-100 rounded-box shadow-md" id="nav" class="flush-left">
             <?php
             if($nav && ($navs=$nav->getNavLinks()) && is_array($navs)){
                 foreach($navs as $name =>$nav) {
-                    echo sprintf('<li><a class="%s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
+                    echo sprintf('<li class="list-row" ><a class="%s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
                 }
             } ?>
         </ul>
