@@ -1,7 +1,8 @@
 <?php
 $BUTTONS = isset($BUTTONS) ? $BUTTONS : true;
 ?>
-    <div class="sidebar pull-right">
+<!-- Sidebar: Here modificate to principal of users -->
+    <div class="flex w-full flex-col lg:flex-row">
 <?php if ($BUTTONS) { ?>
         <div class="front-page-button flush-right">
 <p>
@@ -12,7 +13,7 @@ $BUTTONS = isset($BUTTONS) ? $BUTTONS : true;
                 echo __('Open a New Ticket');?></a>
 </p>
 <?php } ?>
-<p>
+<p class="">
             <a href="view.php" style="display:block" class="green button"><?php
                 echo __('Check Ticket Status');?></a>
 </p>

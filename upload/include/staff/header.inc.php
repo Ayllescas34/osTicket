@@ -32,7 +32,7 @@ if (osTicket::is_ie())
         .tip_shadow { display:block !important; }
     </style>
     <![endif]-->
-    <script src="<?php echo ROOT_PATH; ?>/js/custom.js"></script>
+  
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jquery-3.7.0.min.js?3ff35ad"></script>
     <link rel="stylesheet" href="<?php echo ROOT_PATH ?>css/thread.css?3ff35ad" media="all"/>
     <link rel="stylesheet" href="<?php echo ROOT_PATH ?>scp/css/scp.css?3ff35ad" media="all"/>

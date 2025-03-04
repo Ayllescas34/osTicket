@@ -62,8 +62,11 @@ if (osTicket::is_ie())
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-plugins.js?3ff35ad"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/redactor-osticket.js?3ff35ad"></script>
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/select2.min.js?3ff35ad"></script>
+
+
     <link href="<?php echo ROOT_PATH; ?>/css/daysi.css" rel="stylesheet" type="text/css" />
     <script src="<?php echo ROOT_PATH; ?>/js/daysi.js"></script>
+    <script src="<?php echo ROOT_PATH; ?>/js/custom.js"></script>
 
 
     <?php
