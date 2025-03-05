@@ -16,7 +16,7 @@ if ($thisstaff && $thisstaff->is2FAPending())
         <span class="flex-shrink-0 mr-4" ></span>
         <img class="md:mt- ml-3 md:ml-0 h-20 w-20 md:h-10 md:w-25 border-[6px]" src="logo.php?login" alt="osTicket :: <?php echo __('Staff Control Panel');?>" />
     </a></h1>
-    <h3 class="flex items-center justify-center" id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
+    <h3 class="" id="login-message"><?php echo Format::htmlchars($msg); ?></h3>
     <div class="banner"><small><?php echo ($content) ? Format::display($content->getLocalBody()) : ''; ?></small></div>
     <div id="loading" style="display:none;" class="dialog">
         <h1><i class="icon-spinner icon-spin icon-large"></i>

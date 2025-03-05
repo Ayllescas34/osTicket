@@ -64,9 +64,10 @@ if (osTicket::is_ie())
     <script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/select2.min.js?3ff35ad"></script>
 
 
+
+    <script src="<?php echo ROOT_PATH; ?>/js/custom.js"></script>
     <link href="<?php echo ROOT_PATH; ?>/css/daysi.css" rel="stylesheet" type="text/css" />
     <script src="<?php echo ROOT_PATH; ?>/js/daysi.js"></script>
-    <script src="<?php echo ROOT_PATH; ?>/js/custom.js"></script>
 
 
     <?php
@@ -91,11 +92,12 @@ if (osTicket::is_ie())
         <link rel="alternate" href="//<?php echo $_SERVER['HTTP_HOST'] . htmlspecialchars($_SERVER['REQUEST_URI']); ?>"
             hreflang="x-default" />
 <?php
+
     }
     ?>
 </head>
-<body>
-    <div id="container">
+<body class="grid g-6 flex items-center justify-center  min-h-screen text-center bg-gray-100 ">
+    <div class="p-4 m-4" id="container">
         <?php
         if($ost->getError())
             echo sprintf('<div class="error_bar">%s</div>', $ost->getError());
@@ -104,7 +106,7 @@ if (osTicket::is_ie())
         elseif($ost->getNotice())
             echo sprintf('<div class="notice_bar">%s</div>', $ost->getNotice());
         ?>
-        <div id="header">
+        <div class="flex justify-center p-4 m-4" id="header">
             <div class="pull-right flush-right">
             <p>
              <?php
@@ -147,21 +149,21 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
 } ?>
             </p>
             </div>
-            <a class="pull-left" id="logo" href="<?php echo ROOT_PATH; ?>index.php"
+            <a class="pull-flex" id="logo" href="<?php echo ROOT_PATH; ?>index.php"   // Change the href value to the URL of your support center
             title="<?php echo __('Support Center'); ?>">
-                <span class="valign-helper"></span>
-                <img src="<?php echo ROOT_PATH; ?>logo.php" border=0 alt="<?php
+                <span class="flex justify-center item-center"></span>
+                <img class="flex justify-center" src="<?php echo ROOT_PATH; ?>logo.php" border=0 alt="<?php
                 echo $ost->getConfig()->getTitle(); ?>">
             </a>
         </div>
         <div class="clear"></div>
         <?php
         if($nav){ ?>
-        <ul class="list bg-base-100 rounded-box shadow-md" id="nav" class="flush-left">
+        <ul class="navbar bg-base-100 shadow-sm" id="nav">
             <?php
             if($nav && ($navs=$nav->getNavLinks()) && is_array($navs)){
                 foreach($navs as $name =>$nav) {
-                    echo sprintf('<li class="list-row" ><a class="%s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
+                    echo sprintf('<li class="flex justify-center" ><a class="btn btn-ghost text-xl %s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
                 }
             } ?>
         </ul>
