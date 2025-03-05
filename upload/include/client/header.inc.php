@@ -163,7 +163,7 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
             <?php
             if($nav && ($navs=$nav->getNavLinks()) && is_array($navs)){
                 foreach($navs as $name =>$nav) {
-                    echo sprintf('<li class="flex justify-center" ><a class="btn btn-ghost text-xl %s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
+                    echo sprintf('<li class="flex justify-center rounded-20 text-blue-200" ><a class="btn btn-ghost text-xl %s %s" href="%s">%s</a></li>%s',$nav['active']?'active':'',$name,(ROOT_PATH.$nav['href']),$nav['desc'],"\n");
                 }
             } ?>
         </ul>

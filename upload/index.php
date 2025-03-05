@@ -22,9 +22,9 @@ require_once INCLUDE_DIR . 'class.page.php';
 $section = 'home';
 require(CLIENTINC_DIR.'header.inc.php');
 ?>
-<div class="" id="landing_page">
+<div class="w-full   justify-Center items-center" id="landing_page">
 <?php include CLIENTINC_DIR.'templates/sidebar.tmpl.php'; ?>
-<div class="main-content">
+<div class="w-full justify-Center items-center top-5">
 <?php
 if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
 <div class="search-form">
