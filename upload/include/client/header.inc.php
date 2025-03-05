@@ -97,7 +97,7 @@ if (osTicket::is_ie())
     ?>
 </head>
 <body class="grid g-6 flex items-center justify-center  min-h-screen text-center bg-gray-100 ">
-    <div class="p-4 m-4" id="container">
+    <div class="p-4 m-4 " id="container">
         <?php
         if($ost->getError())
             echo sprintf('<div class="error_bar">%s</div>', $ost->getError());
@@ -106,8 +106,8 @@ if (osTicket::is_ie())
         elseif($ost->getNotice())
             echo sprintf('<div class="notice_bar">%s</div>', $ost->getNotice());
         ?>
-        <div class="flex justify-center p-4 m-4" id="header">
-            <div class="pull-right flush-right">
+        <div class="flex justify-center p-4 m-4 " id="header">
+            <div class="grid gap-4 text-lg m-2">  <!--GUEST USER | SIGN IN-->
             <p>
              <?php
                 if ($thisclient && is_object($thisclient) && $thisclient->isValid()
@@ -149,10 +149,10 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
 } ?>
             </p>
             </div>
-            <a class="pull-flex" id="logo" href="<?php echo ROOT_PATH; ?>index.php"   // Change the href value to the URL of your support center
+            <a class="flex flex-row" id="logo" href="<?php echo ROOT_PATH; ?>index.php"   // TODO LO QUE TIENE QUE VER CON EL LOGO
             title="<?php echo __('Support Center'); ?>">
                 <span class="flex justify-center item-center"></span>
-                <img class="flex justify-center" src="<?php echo ROOT_PATH; ?>logo.php" border=0 alt="<?php
+                <img class="flex justify-center " src="<?php echo ROOT_PATH; ?>logo.php" border=0 alt="<?php
                 echo $ost->getConfig()->getTitle(); ?>">
             </a>
         </div>

@@ -22,7 +22,7 @@ require_once INCLUDE_DIR . 'class.page.php';
 $section = 'home';
 require(CLIENTINC_DIR.'header.inc.php');
 ?>
-<div id="landing_page">
+<div class="" id="landing_page">
 <?php include CLIENTINC_DIR.'templates/sidebar.tmpl.php'; ?>
 <div class="main-content">
 <?php
@@ -35,7 +35,7 @@ if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
     </form>
 </div>
 <?php } ?>
-<div class="texto-principal">
+<div class="texto-principal text-black-300">
     
 <?php
 
