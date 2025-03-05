@@ -172,10 +172,10 @@ if (($all_langs = Internationalization::getConfiguredSystemLanguages())
          <hr>
         <?php
         } ?>
-        <div id="content">
+        <div class="" id="content">
 
          <?php if($errors['err']) { ?>
-            <div id="msg_error"><?php echo $errors['err']; ?></div>
+            <div class="text-blue-300 font-bold" id="msg_error"><?php echo $errors['err']; ?></div>
          <?php }elseif($msg) { ?>
             <div id="msg_notice"><?php echo $msg; ?></div>
          <?php }elseif($warn) { ?>
