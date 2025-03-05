@@ -31,13 +31,13 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 }
 
 ?>
-<h1><?php echo __('Open a New Ticket');?></h1>
-<p><?php echo __('Please fill in the form below to open a new ticket.');?></p>
-<form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
+<h1 class="text-green-300"><?php echo __('Abrir un nuevo ticket');?></h1>
+<p><?php echo __('Rellene el siguiente formulario para abrir un nuevo ticket.');?></p>
+<form class="overflow-x-auto" id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
   <?php csrf_token(); ?>
   <input type="hidden" name="a" value="open">
-  <table width="800" cellpadding="1" cellspacing="0" border="0">
-    <tbody>
+  <table class="table table-zebra flex items-center" width="800" cellpadding="1" cellspacing="0" border="0">
+    <tbody class="flex- items-center">
 <?php
         if (!$thisclient) {
             $uform = UserForm::getUserForm()->getForm($_POST);
@@ -72,7 +72,7 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
                           $(document.head).append(json.media);
                         }
                       });">
-                <option value="" selected="selected">&mdash; <?php echo __('Select a Help Topic');?> &mdash;</option>
+                <option value="" selected="selected">&mdash; <?php echo __('Selecciona tu posible problema');?> &mdash;</option>
                 <?php
                 if($topics=Topic::getPublicHelpTopics()) {
                     foreach($topics as $id =>$name) {
