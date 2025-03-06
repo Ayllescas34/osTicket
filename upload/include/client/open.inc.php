@@ -31,13 +31,13 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 }
 
 ?>
-<h1 class="text-green-300"><?php echo __('Abrir un nuevo ticket');?></h1>
-<p><?php echo __('Rellene el siguiente formulario para abrir un nuevo ticket.');?></p>
-<form class="overflow-x-auto" id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
+<h1 class="font-bold"><?php echo __('Abrir un nuevo ticket');?></h1>
+<p class="text-blue-900 font-bolt font-semibold text-lg"><?php echo __('Rellene el siguiente formulario para abrir un nuevo ticket.');?></p>
+<form class="text-blue-800" id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
   <?php csrf_token(); ?>
   <input type="hidden" name="a" value="open">
   <table class="table table-zebra flex items-center" width="800" cellpadding="1" cellspacing="0" border="0">
-    <tbody class="flex- items-center">
+    <tbody class="table-auto border border-gray-300">
 <?php
         if (!$thisclient) {
             $uform = UserForm::getUserForm()->getForm($_POST);
@@ -46,15 +46,15 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
         }
         else { ?>
             <tr><td colspan="2"><hr /></td></tr>
-        <tr><td><?php echo __('Email'); ?>:</td><td><?php
+        <tr class="hover:bg-gray-100"><td class="px-4 py-2"><?php echo __('Email'); ?>:</td><td><?php
             echo $thisclient->getEmail(); ?></td></tr>
-        <tr><td><?php echo __('Client'); ?>:</td><td><?php
+        <tr class="hover:bg:gray-100"><td class="px-4 py-2"><?php echo __('Client'); ?>:</td><td><?php
             echo Format::htmlchars($thisclient->getName()); ?></td></tr>
         <?php } ?>
     </tbody>
     <tbody>
     <tr><td colspan="2"><hr />
-        <div class="form-header" style="margin-bottom:0.5em">
+        <div class=" text-blue-800" style="margin-bottom:0.5em">
         <b><?php echo __('Help Topic'); ?></b>
         </div>
     </td></tr>
@@ -92,7 +92,7 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
             include(CLIENTINC_DIR . 'templates/dynamic-form.tmpl.php');
         } ?>
     </tbody>
-    <tbody>
+    <tbody class="table-auto border border-gray-300">
     <?php
     if($cfg && $cfg->isCaptchaEnabled() && (!$thisclient || !$thisclient->isValid())) {
         if($_POST && $errors && !$errors['captcha'])
@@ -115,7 +115,7 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
   </table>
 <hr/>
   <p class="buttons" style="text-align:center;">
-        <input type="submit" value="<?php echo __('Create Ticket');?>">
+        <input class="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-300 hover:shadow-xl" type="submit" value="<?php echo __('Create Ticket');?>">
         <input type="reset" name="reset" value="<?php echo __('Reset');?>">
         <input type="button" name="cancel" value="<?php echo __('Cancel'); ?>" onclick="javascript:
             $('.richtext').each(function() {
